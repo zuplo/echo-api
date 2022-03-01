@@ -1,0 +1,10 @@
+{
+  "description": "A simple test that invoked GET on the hello-world example",
+  "pathname": "/v1/hello-world",
+  "method": "POST",
+  "headers": {
+    "content-type": "application/json",
+    "banana": "boo"
+  },
+  "body": "{ \"hi\" : \"TEset\" }"
+}

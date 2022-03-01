@@ -1,0 +1,60 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "pwa-node",
+      "request": "launch",
+      "name": "Dev",
+      "env": {
+        "NODE_ENV": "development"
+      },
+      "smartStep": true,
+      "runtimeExecutable": "yarn",
+      "runtimeArgs": ["dev"],
+      "skipFiles": ["<node_internals>/**"],
+      "console": "integratedTerminal"
+    },
+    {
+      "type": "pwa-node",
+      "request": "launch",
+      "name": "Start",
+      "env": {
+        "NODE_ENV": "development"
+      },
+      "smartStep": true,
+      "runtimeExecutable": "yarn",
+      "runtimeArgs": ["serve"],
+      "skipFiles": ["<node_internals>/**"],
+      "console": "integratedTerminal"
+    },
+    {
+      "type": "pwa-node",
+      "request": "launch",
+      "name": "Build: Node",
+      "env": {
+        "NODE_ENV": "development"
+      },
+      "smartStep": true,
+      "runtimeExecutable": "yarn",
+      "runtimeArgs": ["build", "--platform", "node"],
+      "skipFiles": ["<node_internals>/**"],
+      "console": "integratedTerminal"
+    },
+    {
+      "type": "pwa-node",
+      "request": "launch",
+      "name": "Build: Workers",
+      "env": {
+        "NODE_ENV": "development"
+      },
+      "smartStep": true,
+      "runtimeExecutable": "yarn",
+      "runtimeArgs": ["build", "--platform", "worker"],
+      "skipFiles": ["<node_internals>/**"],
+      "console": "integratedTerminal"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "echo-api",
+  "version": "1.0.0",
+  "author": "",
+  "copyright": "",
+  "scripts": {
+    "dev": "zuplo dev",
+    "build": "zuplo build",
+    "test": "zuplo test",
+    "postinstall": "husky install"
+  },
+  "dependencies": {
+    "@zuplo/core": "^3.49.0",
+    "@zuplo/runtime": "^3.49.0"
+  },
+  "devDependencies": {
+    "husky": "^7.0.4"
+  },
+  "packageManager": "yarn@3.1.0"
+}
