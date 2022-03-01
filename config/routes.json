@@ -19,7 +19,7 @@
         "PATCH"
       ],
       "corsPolicy": "anything-goes",
-      "version": "v1",
+      "version": "none",
       "policies": {
         "inbound": []
       }
