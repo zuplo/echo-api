@@ -21,8 +21,6 @@ jobs:
           GITHUB_NPM_TOKEN: ${{ secrets.GH_NPM_PACKAGE_READ_TOKEN }}
           API_VERSION: ${{ env.GITHUB_SHA }}
 
-      - run: yarn lint
-
       - run: npm config set @zuplo:registry https://npm.pkg.github.com
       - run: npm config set //npm.pkg.github.com/:_authToken ${{ secrets.GH_NPM_PACKAGE_READ_TOKEN }}
       - run: npm install @zuplo/orchestration -g
