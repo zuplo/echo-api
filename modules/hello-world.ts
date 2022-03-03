@@ -10,7 +10,7 @@ const bodyValue = async (request: ZuploRequest, context: ZuploContext) => {
   const contentType = request.headers.get("content-type");
 
 
-  if (contentType.startsWith("application/json")) {
+  if (contentType?.startsWith("application/json")) {
     try {
       return JSON.parse(bodyText);
     }
