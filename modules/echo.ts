@@ -1,7 +1,6 @@
 import { ZuploContext, ZuploRequest } from "@zuplo/runtime";
 
 const bodyValue = async (request: ZuploRequest, context: ZuploContext) => {
-
   if (!request.body) {
     return undefined;
   }
@@ -9,17 +8,15 @@ const bodyValue = async (request: ZuploRequest, context: ZuploContext) => {
   const bodyText = await request.text();
   const contentType = request.headers.get("content-type");
 
-
   if (contentType?.startsWith("application/json")) {
     try {
       return JSON.parse(bodyText);
-    }
-    catch (err) {
+    } catch (err) {
       //ignore error
     }
   }
   return bodyText;
-}
+};
 
 export default async function (request: ZuploRequest, context: ZuploContext) {
   const { url, method, query } = request;
@@ -32,11 +29,16 @@ export default async function (request: ZuploRequest, context: ZuploContext) {
     headers[key] = value;
   }
 
-  return {
+  const result = {
     url,
     method,
     query,
     body,
-    headers
-  }
+    headers,
+  };
+  return new Response(JSON.stringify(result, undefined, 2), {
+    headers: {
+      "content-type": "application/json",
+    },
+  });
 }
