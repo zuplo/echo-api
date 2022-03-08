@@ -1,11 +1,11 @@
 {
   "routes": [
     {
-      "label": "What zup?",
+      "label": "Echo",
       "path": "/(.*)",
       "handler": {
         "export": "default",
-        "module": "$import(./modules/hello-world)"
+        "module": "$import(./modules/echo)"
       },
       "methods": [
         "GET",
