@@ -16,7 +16,7 @@ jobs:
       - run: yarn install
         env:
           GITHUB_NPM_TOKEN: ${{ secrets.GH_NPM_PACKAGE_READ_TOKEN }}
-      - run: yarn zuplo build
+      - run: yarn build
         env:
           GITHUB_NPM_TOKEN: ${{ secrets.GH_NPM_PACKAGE_READ_TOKEN }}
           API_VERSION: ${{ env.GITHUB_SHA }}

@@ -362,7 +362,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@zuplo/core@npm:^3.49.0":
+"@zuplo/core@npm:^3.73.0":
   version: 3.73.0
   resolution: "@zuplo/core@npm:3.73.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40zuplo%2Fcore%2F3.73.0%2Fe7f0c6339efcac0b109c4d3ceea4d75ad9b90e9a31e3d7cc521e92263e282c15"
   dependencies:
@@ -415,7 +415,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@zuplo/runtime@npm:^3.49.0, @zuplo/runtime@npm:^3.73.0":
+"@zuplo/runtime@npm:^3.73.0":
   version: 3.73.0
   resolution: "@zuplo/runtime@npm:3.73.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40zuplo%2Fruntime%2F3.73.0%2F2e563a7718319871bb624ef65271473426c6db891144819f17ad9b7c6d5ae871"
   dependencies:
@@ -1096,8 +1096,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "echo-api@workspace:."
   dependencies:
-    "@zuplo/core": ^3.49.0
-    "@zuplo/runtime": ^3.49.0
+    "@zuplo/core": ^3.73.0
+    "@zuplo/runtime": ^3.73.0
     husky: ^7.0.4
   languageName: unknown
   linkType: soft
