@@ -23,7 +23,7 @@ export default async function (request: ZuploRequest, context: ZuploContext) {
 
   const body = await bodyValue(request, context);
 
-  const headers = {"test": "💪"};
+  const headers = {};
 
   for (const [key, value] of request.headers) {
     if (!key.startsWith("cf-")) {
