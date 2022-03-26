@@ -22,6 +22,7 @@ jobs:
           API_VERSION: ${{ env.GITHUB_SHA }}
 
       - uses: zuplo/deploy-zup-action@main
+        if: ${{ github.ref == 'refs/heads/main' }}
         with:
           project: zuplo-echo-api
           account_id: 4f59a390b9f139a4a82b757edd3c71dd
