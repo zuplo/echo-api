@@ -436,28 +436,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@zuplo/debug@npm:^3.132.0":
-  version: 3.132.0
-  resolution: "@zuplo/debug@npm:3.132.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40zuplo%2Fdebug%2F3.132.0%2F26be87b4eefd440764bcf541e67e77667b7a510576f59b9bfefc4c16be7ff91e"
-  checksum: 49bbd9f593adab5a1cc0c78c05606b045f0e5dae20c4de2dcb14c7d39a41864db8c14b9e313f899d16bd8f04f3f8bb1b314933959c4e80c7eb07c1192a107ac0
-  languageName: node
-  linkType: hard
-
 "@zuplo/debug@npm:^3.142.0":
   version: 3.142.0
   resolution: "@zuplo/debug@npm:3.142.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40zuplo%2Fdebug%2F3.142.0%2F752b838390d08654a2083cc31f7bdbb3aae85b7f699ff5340123c307d390b462"
   checksum: d0c5ea4b232bfb67bf4ef0a44458487a229d1c220000d888a4bb1128e32ae4dd39fa19569bda1814fe2f8cbdfa88175c7ff0c2371b0ae37ae2c396201bcef02f
-  languageName: node
-  linkType: hard
-
-"@zuplo/internal@npm:^3.132.0":
-  version: 3.132.0
-  resolution: "@zuplo/internal@npm:3.132.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40zuplo%2Finternal%2F3.132.0%2F7215185d78e72d68aaa6eb6c79178556de559aa70ecceaf35df23275188f4bb7"
-  dependencies:
-    ajv: ^8.11.0
-    path-to-regexp: ^6.2.0
-    ts-custom-error: ^3.2.0
-  checksum: 23976add7964084c5ee7483ba08c999181e4c01d2ac95cfc9824e2b98eee50778013738f7a8444477edafbfd20029cdf1725641072f76f312f716183933dbe82
   languageName: node
   linkType: hard
 
@@ -469,22 +451,6 @@ __metadata:
     path-to-regexp: ^6.2.0
     ts-custom-error: ^3.2.0
   checksum: 85a37bb2c9b483dd2c8c61385a41196b50fc44617abbddd32dced6f6b5d0872d8b08a29ba7d152565f66e127fb7ca2804ecaf890da46be1e208526df858b38b5
-  languageName: node
-  linkType: hard
-
-"@zuplo/runtime@npm:^3.132.0":
-  version: 3.132.0
-  resolution: "@zuplo/runtime@npm:3.132.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40zuplo%2Fruntime%2F3.132.0%2Fe309289919ecac6f465996dcbd0ad3110b1b806a290115e09f0e7719ad2628b9"
-  dependencies:
-    "@zuplo/debug": ^3.132.0
-    "@zuplo/internal": ^3.132.0
-    ajv: ^8.11.0
-    jose: ^4.6.0
-    lru-cache: ^6.0.0
-    path-to-regexp: ^6.2.0
-    regenerator-runtime: ^0.13.9
-    tslib: ^2.3.1
-  checksum: 907da42cd9bfa78a454da9a674b9695a6852292210da1b29f3429e681f6da05043de73479cdf2609388b16c0d3fcd42f82868d7fd6ef653987229b178559af88
   languageName: node
   linkType: hard
 
@@ -1182,7 +1148,7 @@ __metadata:
   resolution: "echo-api@workspace:."
   dependencies:
     "@zuplo/core": ^3.142.0
-    "@zuplo/runtime": ^3.132.0
+    "@zuplo/runtime": ^3.142.0
     husky: ^7.0.4
   languageName: unknown
   linkType: soft
