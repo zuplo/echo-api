@@ -10,8 +10,8 @@
     "postinstall": "husky install"
   },
   "dependencies": {
-    "@zuplo/core": "^3.332.0",
-    "@zuplo/runtime": "^3.332.0"
+    "@zuplo/core": "^3.358.0",
+    "@zuplo/runtime": "^3.358.0"
   },
   "devDependencies": {
     "husky": "^7.0.4"
