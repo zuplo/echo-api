@@ -4,9 +4,10 @@
   "author": "",
   "copyright": "",
   "scripts": {
-    "dev": "zuplo dev",
+    "start": "zuplo dev",
     "build": "zuplo build",
     "test": "zuplo test",
+    "verify": "zuplo verify",
     "postinstall": "husky install"
   },
   "dependencies": {
@@ -15,6 +16,5 @@
   },
   "devDependencies": {
     "husky": "^7.0.4"
-  },
-  "packageManager": "yarn@3.1.0"
+  }
 }

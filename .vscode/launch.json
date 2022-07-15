@@ -5,54 +5,67 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "type": "pwa-node",
+      "name": "Debug: Attach to Running Zup",
+      "processId": "${command:PickProcess}",
+      "request": "attach",
+      "skipFiles": ["<node_internals>/**"],
+      "type": "node"
+    },
+    {
+      "type": "node",
       "request": "launch",
       "name": "Dev",
       "env": {
-        "NODE_ENV": "development"
+        "NODE_ENV": "development",
+        "NODE_OPTIONS": "--enable-source-maps"
       },
       "smartStep": true,
-      "runtimeExecutable": "yarn",
-      "runtimeArgs": ["dev"],
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run-script", "dev"],
       "skipFiles": ["<node_internals>/**"],
-      "console": "integratedTerminal"
+      "console": "integratedTerminal",
+      "sourceMaps": true,
+      "resolveSourceMapLocations": ["${workspaceFolder}/dist/**"]
     },
     {
-      "type": "pwa-node",
+      "type": "node",
       "request": "launch",
-      "name": "Start",
+      "name": "Run: Tests",
       "env": {
-        "NODE_ENV": "development"
+        "NODE_ENV": "development",
+        "LOG_LEVEL": "info"
       },
       "smartStep": true,
-      "runtimeExecutable": "yarn",
-      "runtimeArgs": ["serve"],
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run-script", "test"],
       "skipFiles": ["<node_internals>/**"],
       "console": "integratedTerminal"
     },
     {
-      "type": "pwa-node",
+      "type": "node",
       "request": "launch",
       "name": "Build: Node",
       "env": {
-        "NODE_ENV": "development"
+        "NODE_ENV": "development",
+        "NODE_OPTIONS": "--enable-source-maps"
       },
       "smartStep": true,
-      "runtimeExecutable": "yarn",
-      "runtimeArgs": ["build", "--platform", "node"],
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run-script", "build", "--platform", "node"],
       "skipFiles": ["<node_internals>/**"],
       "console": "integratedTerminal"
     },
     {
-      "type": "pwa-node",
+      "type": "node",
       "request": "launch",
       "name": "Build: Workers",
       "env": {
-        "NODE_ENV": "development"
+        "NODE_ENV": "development",
+        "NODE_OPTIONS": "--enable-source-maps"
       },
       "smartStep": true,
-      "runtimeExecutable": "yarn",
-      "runtimeArgs": ["build", "--platform", "worker"],
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run-script", "build", "--platform", "worker"],
       "skipFiles": ["<node_internals>/**"],
       "console": "integratedTerminal"
     }
