@@ -15,6 +15,6 @@
     "@zuplo/runtime": "^3.332.0"
   },
   "devDependencies": {
-    "husky": "^7.0.4"
+    "husky": "^8.0.1"
   }
 }
