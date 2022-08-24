@@ -26,11 +26,7 @@ export default async function (request: ZuploRequest, context: ZuploContext) {
   const headers = {};
 
   for (const [key, value] of request.headers) {
-    if (
-      !key.startsWith("cf-") ||
-      key.startsWith("x-b3-") ||
-      key.startsWith("x-envoy-")
-    ) {
+    if (!key.startsWith("cf-")) {
       headers[key] = value;
     }
   }
