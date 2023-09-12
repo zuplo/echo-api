@@ -2,9 +2,10 @@
 .cache/
 dist/
 node_modules/
-.pnp.*
 .env
+.env.zuplo
 .husky/_
+.eslintcache
 
 # OS Stuff
 .DS_Store
