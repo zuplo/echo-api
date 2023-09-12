@@ -1,6 +1,6 @@
-import { ZuploContext, ZuploRequest } from "@zuplo/runtime";
+import { ZuploRequest } from "@zuplo/runtime";
 
-const bodyValue = async (request: ZuploRequest, context: ZuploContext) => {
+const bodyValue = async (request: ZuploRequest):Promise<undefined|string> => {
   if (!request.body) {
     return undefined;
   }
@@ -18,10 +18,10 @@ const bodyValue = async (request: ZuploRequest, context: ZuploContext) => {
   return bodyText;
 };
 
-export default async function (request: ZuploRequest, context: ZuploContext) {
+export default async function (request: ZuploRequest): Promise<Response> {
   const { url, method, query } = request;
 
-  const body = await bodyValue(request, context);
+  const body = await bodyValue(request);
 
   const headers = {};
 
