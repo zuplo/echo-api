@@ -1,0 +1,30 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "My Zuplo API"
+  },
+  "paths": {
+    "/(.*)": {
+      "x-zuplo-path": {
+        "pathMode": "open-api"
+      },
+      "get,head,post,put,delete,connect,options,trace,patch": {
+        "summary": "Echo",
+        "description": "Echo",
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "handler": {
+            "export": "default",
+            "module": "$import(./modules/echo)",
+            "options": {}
+          },
+          "policies": {
+            "inbound": []
+          }
+        },
+        "operationId": "d1d10941-6a20-4f78-9a66-d8ad3867c39c"
+      }
+    }
+  }
+}

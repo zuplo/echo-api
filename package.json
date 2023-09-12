@@ -4,17 +4,30 @@
   "author": "",
   "copyright": "",
   "scripts": {
-    "start": "zuplo dev",
+    "clean": "git clean -Xfde !.env",
+    "dev": "zuplo dev",
     "build": "zuplo build",
-    "test": "zuplo test",
-    "verify": "zuplo verify",
-    "postinstall": "husky install"
+    "format": "prettier --write .",
+    "postinstall": "husky install",
+    "lint": "eslint --cache --fix . && tsc -p tsconfig.types.json",
+    "test": "zup test"
   },
+  "main": "./dist/worker.js",
   "dependencies": {
-    "@zuplo/core": "^4.13.0",
-    "@zuplo/runtime": "^4.13.0"
+    "@zuplo/runtime": "^5.1276.0"
+  },
+  "lint-staged": {
+    "**/*.{ts,json,md,yml,js,css,html}": [
+      "prettier --write"
+    ],
+    "**/*.{ts,js}": [
+      "eslint --cache --fix --ignore-path .eslintignore"
+    ]
   },
   "devDependencies": {
-    "husky": "^8.0.1"
+    "@zuplo/core": "^5.1276.0",
+    "@zuplo/dev": "^1.63.0",
+    "@zuplo/dev-tools": "^1.91.0",
+    "dotenv": "^16.3.1"
   }
 }

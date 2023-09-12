@@ -1,3 +1,6 @@
 dist/
 .eslintrc.js
 scripts/
+tests/
+deno-tests/
+spectral/

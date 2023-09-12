@@ -13,12 +13,11 @@ module.exports = {
     "prettier",
   ],
   rules: {
-    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/explicit-function-return-type": "error",
     "@typescript-eslint/no-non-null-assertion": "off",
     "no-console": "error",
     "@typescript-eslint/no-explicit-any": "error",
     "@typescript-eslint/no-floating-promises": "error",
     "import/no-nodejs-modules": "error",
-    "@typescript-eslint/no-unused-vars": "off",
   },
 };
