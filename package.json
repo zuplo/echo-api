@@ -14,7 +14,7 @@
   },
   "main": "./dist/worker.js",
   "dependencies": {
-    "@zuplo/runtime": "^5.1563.0"
+    "@zuplo/runtime": "^5.1564.0"
   },
   "lint-staged": {
     "**/*.{ts,json,md,yml,js,css,html}": [
@@ -25,7 +25,7 @@
     ]
   },
   "devDependencies": {
-    "@zuplo/core": "^5.1563.0",
+    "@zuplo/core": "^5.1564.0",
     "@zuplo/dev": "^1.63.0",
     "@zuplo/dev-tools": "^1.91.0",
     "dotenv": "^16.3.1"
