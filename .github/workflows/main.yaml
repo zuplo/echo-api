@@ -15,18 +15,20 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+      # This explicitly tells action to use the latest version of Zuplo from the public NPM registry
       - uses: actions/setup-node@v3
         with:
-          node-version: 18.x
+          node-version: "18.x"
+          registry-url: "https://npm.pkg.github.com"
           cache: "npm"
 
       - run: npm install
         env:
           GITHUB_NPM_TOKEN: ${{ secrets.GH_NPM_PACKAGE_READ_TOKEN }}
 
-      - name: Pre-cache Deno
-        run: |
-          ./node_modules/deno-bin/bin/deno install --name cached-zuplo-server -f https://raw.githubusercontent.com/zuplo/runtime-deno/main/local-dev-impl/main.ts
+      #- name: Pre-cache Deno
+      #  run: |
+      #    ./node_modules/deno-bin/bin/deno install --name cached-zuplo-server -f https://raw.githubusercontent.com/zuplo/runtime-deno/main/local-dev-impl/main.ts
 
       - run: npm run build
         env:

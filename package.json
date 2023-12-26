@@ -26,8 +26,7 @@
   },
   "devDependencies": {
     "@zuplo/core": "^5.1609.0",
-    "@zuplo/dev": "^1.63.0",
-    "@zuplo/dev-tools": "^1.91.0",
+    "@zuplo/dev-tools": "^1.112.0",
     "dotenv": "^16.3.1"
   }
 }
