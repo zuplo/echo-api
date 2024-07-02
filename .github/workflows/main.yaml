@@ -24,10 +24,6 @@ jobs:
         env:
           GITHUB_NPM_TOKEN: ${{ secrets.GH_NPM_PACKAGE_READ_TOKEN }}
 
-      - name: Pre-cache Deno
-        run: |
-          ./node_modules/deno-bin/bin/deno install --name cached-zuplo-server -f https://raw.githubusercontent.com/zuplo/runtime-deno/main/local-dev-impl/main.ts
-
       - run: npm run build
         env:
           GIT_SHA: ${{ github.sha }}
