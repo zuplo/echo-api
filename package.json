@@ -8,9 +8,10 @@
     "dev": "zuplo dev",
     "build": "zuplo build",
     "format": "prettier --write .",
-    "postinstall": "husky install",
+    "postinstall": "npx @socketsecurity/socket-patch apply --silent --ecosystems npm && husky install",
     "lint": "eslint --cache --fix . && tsc -p tsconfig.types.json",
-    "test": "zup test"
+    "test": "zup test",
+    "dependencies": "npx @socketsecurity/socket-patch apply --silent --ecosystems npm"
   },
   "main": "./dist/worker.js",
   "dependencies": {
