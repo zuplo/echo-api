@@ -11,9 +11,6 @@ jobs:
       contents: "read"
       packages: "read"
 
-    env:
-      DENO_AUTH_TOKENS: ${{ secrets.GH_CUSTOM_TOKEN }}@raw.githubusercontent.com
-
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
